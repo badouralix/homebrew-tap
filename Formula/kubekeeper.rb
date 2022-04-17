@@ -6,6 +6,7 @@ class Kubekeeper < Formula
   license "MIT"
   head "https://github.com/badouralix/kubekeeper.git", branch: "main"
 
+  depends_on "fzf"
   depends_on "kubernetes-cli"
 
   def install
