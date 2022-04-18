@@ -14,6 +14,6 @@ class Kubekeeper < Formula
   end
 
   test do
-    assert_match "Client Version", shell_output("#{bin}/kubekeeper --version 2>&1")
+    assert_match "Client Version", shell_output("#{bin}/kubekeeper version --client 2>&1")
   end
 end
