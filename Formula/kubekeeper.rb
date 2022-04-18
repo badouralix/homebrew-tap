@@ -6,12 +6,11 @@ class Kubekeeper < Formula
   license "MIT"
   head "https://github.com/badouralix/kubekeeper.git", branch: "main"
 
-  depends_on "kubernetes-cli"
   depends_on "rust" => :build
+  depends_on "kubernetes-cli"
 
   def install
-    system "cargo", "build", "--release", "--bin", "kubekeeper"
-    bin.install "target/release/kubekeeper"
+    system "cargo", "install", *std_cargo_args
   end
 
   test do
