@@ -1,8 +1,8 @@
 class Kubekeeper < Formula
   desc "Safeguard for kubectl"
   homepage "https://github.com/badouralix/kubekeeper"
-  url "https://github.com/badouralix/kubekeeper/archive/v2.3.0.tar.gz"
-  sha256 "2fea65596864a46348ac4b6f0576dbaf3318fc2194ca62ce618c23aae55f495c"
+  url "https://github.com/badouralix/kubekeeper/archive/v2.4.0.tar.gz"
+  sha256 "30e0e159b27e48bb0bb9f7287ed7b22ca6f7a23fdc5fa6eb0cf70a16b6e1ad80"
   license "MIT"
   head "https://github.com/badouralix/kubekeeper.git", branch: "main"
 
