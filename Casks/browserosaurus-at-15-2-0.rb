@@ -1,4 +1,4 @@
-cask "browserosaurus@15.2.0" do
+cask "browserosaurus-at-15-2-0" do
   arch arm: "arm64", intel: "x64"
 
   version "15.2.0"
