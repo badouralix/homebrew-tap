@@ -1,17 +1,22 @@
 cask "pcloud-drive" do
-  module Utils
-    def self.code
-      if Hardware::CPU.arm?
+  on_arm do
+    module Utils
+      def self.code
         "XZVkmjVZWwo9poN94RYScpUXoWDHeyBareSV"
-      elsif Hardware::CPU.intel?
-        "XZo7mjVZMDpFbSo6SYuTzNiNH49xs7zpuwFX"
+      end
+
+      def self.suffix
+        " macFUSE"
       end
     end
+  end
+  on_intel do
+    module Utils
+      def self.code
+        "XZo7mjVZMDpFbSo6SYuTzNiNH49xs7zpuwFX"
+      end
 
-    def self.suffix
-      if Hardware::CPU.arm?
-        " macFUSE"
-      elsif Hardware::CPU.intel?
+      def self.suffix
         ""
       end
     end
