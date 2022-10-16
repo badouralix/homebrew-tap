@@ -1,32 +1,16 @@
 cask "pcloud-drive" do
-  on_arm do
-    module Utils
-      def self.code
-        "XZVkmjVZWwo9poN94RYScpUXoWDHeyBareSV"
-      end
+  arch arm: " macFUSE", intel: ""
 
-      def self.suffix
-        " macFUSE"
-      end
-    end
+  on_arm do
+    version "3.11.9,XZVkmjVZWwo9poN94RYScpUXoWDHeyBareSV"
+    sha256 "e2a19752339a33017d0973807c5e1df0d257bed012fabd14828ef8218d15a5ef"
   end
   on_intel do
-    module Utils
-      def self.code
-        "XZo7mjVZMDpFbSo6SYuTzNiNH49xs7zpuwFX"
-      end
-
-      def self.suffix
-        ""
-      end
-    end
+    version "3.11.9,XZo7mjVZMDpFbSo6SYuTzNiNH49xs7zpuwFX"
+    sha256 "58742bd2752b098c5489e74d543cdf25ca862f100f0819329382469fc9532850"
   end
 
-  version "3.11.9"
-  sha256 arm:   "e2a19752339a33017d0973807c5e1df0d257bed012fabd14828ef8218d15a5ef",
-         intel: "58742bd2752b098c5489e74d543cdf25ca862f100f0819329382469fc9532850"
-
-  url "https://api.pcloud.com/getpublinkdownload?code=#{Utils.code}" do |page|
+  url "https://api.pcloud.com/getpublinkdownload?code=#{version.csv.second}" do |page|
     require "json"
     data = JSON.parse(page)
     "https://" + data["hosts"][0] + data["path"]
@@ -43,7 +27,7 @@ cask "pcloud-drive" do
 
   auto_updates true
 
-  pkg "pCloud Drive #{version}#{Utils.suffix}.pkg"
+  pkg "pCloud Drive #{version.csv.first}#{arch}.pkg"
 
   uninstall quit:    "com.pcloud.pcloud.macos",
             pkgutil: "com.mobileinno.pkg.pCloudDrive"
