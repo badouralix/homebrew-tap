@@ -1,5 +1,5 @@
 class Yamlfmt < Formula
-  desc "Simple command line tool for formatting yaml files"
+  desc "Extensible command-line tool or library to format yaml files"
   homepage "https://github.com/google/yamlfmt"
   url "https://github.com/google/yamlfmt/archive/v0.8.0.tar.gz"
   sha256 "91fa9715108aa7cf62180a89c33ec797ec923f94af8f7e8ff96870fd3ccb12e5"
