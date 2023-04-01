@@ -2,12 +2,12 @@ cask "pcloud-drive" do
   arch arm: " macFUSE", intel: ""
 
   on_arm do
-    version "3.11.9,XZVkmjVZWwo9poN94RYScpUXoWDHeyBareSV"
-    sha256 "e2a19752339a33017d0973807c5e1df0d257bed012fabd14828ef8218d15a5ef"
+    version "3.13.0,XZg58xVZz3rkWEnsB97CgzvxdexoWFucrSp7"
+    sha256 "0d01f1256565cf1e7d334158c042d417979540ebfaddf982cff8aea3678d84d8"
   end
   on_intel do
-    version "3.11.9,XZo7mjVZMDpFbSo6SYuTzNiNH49xs7zpuwFX"
-    sha256 "58742bd2752b098c5489e74d543cdf25ca862f100f0819329382469fc9532850"
+    version "3.13.0,XZ258xVZIn2QLCKCQQkG0UCTqXv0YFl53Jgy"
+    sha256 "96a31e53ce03285745f25786f805063df17172893da4a53f63f87acd5f5bed29"
   end
 
   url "https://api.pcloud.com/getpublinkdownload?code=#{version.csv.second}" do |page|
