@@ -2,7 +2,7 @@ class RocksdbAT6203 < Formula
   desc "Embeddable, persistent key-value store for fast storage"
   desc "Copy from https://raw.githubusercontent.com/Homebrew/homebrew-core/01eac95/Formula/rocksdb.rb"
   homepage "https://rocksdb.org/"
-  url "https://github.com/facebook/rocksdb/archive/v6.20.3.tar.gz"
+  url "https://github.com/facebook/rocksdb/archive/refs/tags/v6.20.3.tar.gz"
   sha256 "c6502c7aae641b7e20fafa6c2b92273d935d2b7b2707135ebd9a67b092169dca"
   license any_of: ["GPL-2.0-only", "Apache-2.0"]
   head "https://github.com/facebook/rocksdb.git"
